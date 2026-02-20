@@ -120,12 +120,12 @@ Basic security measures applied to all devices:
 ### Switches
 | Switch Name | Connected VLANs |   Special Config   |
 |-------------|-----------------|--------------------|
-| AMD_SW.0    | 90,110,120      | Trunk to router    |
-| AMD_SW.1    | 10,20,90        | Voice VLAN enabled |
-| AMD_SW.2    | 50,60,90        | Voice VLAN enabled |
-| AMD_SW.3    | 130,140,90      | Voice VLAN enabled |
-| AMD_SW.4    | 30,40,90        | Voice VLAN enabled |
-| AMD_SW.6    | 100             | Voice VLAN enabled |
+| AMD_SW.0    | 90,110,120      |   Trunk to router  |
+| AMD_SW.1    | 10,20,90        |   Trunk to router  |
+| AMD_SW.2    | 50,60,90        |   Trunk to router  |
+| AMD_SW.3    | 130,140,90      |   Trunk to router  |
+| AMD_SW.4    | 30,40,90        |   Trunk to router  |
+| AMD_SW.6    | 100             |   Trunk to router  |
 
 ---
 
