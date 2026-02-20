@@ -154,7 +154,7 @@ Basic security measures applied to all devices:
 
 ## 📸 Topology Diagram
 
-![Network Topology](https://raw.githubusercontent.com/ahmdelsayed/ccna-enterprise-network/main/Screenshot%25202026-02-20%2520230213.png)
+![Network Topology](network_topology.png)
 
 ---
 
