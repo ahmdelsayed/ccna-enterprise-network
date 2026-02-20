@@ -2,7 +2,7 @@
 Router>en
 Router#conf t
 AMD_RW.0(config)#hostname AMD_RW.0
-AMD_RW.0(config)#enable secret 25121998
+AMD_RW.0(config)#enable secret ********
 AMD_RW.0(config)#service password-encryption
 AMD_RW.0(config)#line console 0
 AMD_RW.0(config-line)#password 25121998
@@ -32,7 +32,7 @@ AMD_RW.0(config-router)#do wr
 Router>en
 Router#conf t
 AMD_RW.1(config)#hostname AMD_RW.1
-AMD_RW.1(config)#enable secret 25121998
+AMD_RW.1(config)#enable secret ********
 AMD_RW.1(config)#interface gi0/2
 AMD_RW.1(config-if)#no shutdown
 AMD_RW.1(config-if)#exit
@@ -67,7 +67,7 @@ AMD_RW.1(config-router)#do wr
 Router>en
 Router#conf t
 AMD_RW.2(config)#hostname AMD_RW.2
-AMD_RW.2(config)#enable secret 25121998
+AMD_RW.2(config)#enable secret ********
 AMD_RW.2(config)#interface gi0/2
 AMD_RW.2(config-if)#no shutdown
 AMD_RW.2(config-if)#exit
@@ -97,7 +97,7 @@ AMD_RW.2(config-router)#do wr
 Router>en
 Router#conf t
 AMD_RW.3(config)#hostname AMD_RW.3
-AMD_RW.3(config)#enable secret 25121998
+AMD_RW.3(config)#enable secret ********
 AMD_RW.3(config)#interface gi0/2
 AMD_RW.3(config-if)#no shutdown
 AMD_RW.3(config-if)#exit
@@ -127,7 +127,7 @@ AMD_RW.3(config-router)#do wr
 Router>en
 Router#conf t
 AMD_RW.4(config)#hostname AMD_RW.4
-AMD_RW.4(config)#enable secret 25121998
+AMD_RW.4(config)#enable secret ********
 AMD_RW.4(config)#interface gi0/2
 AMD_RW.4(config-if)#no shutdown
 AMD_RW.4(config-if)#exit
@@ -157,7 +157,7 @@ AMD_RW.4(config-router)#do wr
 Router>en
 Router#conf t
 AMD_RW.5(config)#hostname AMD_RW.5
-AMD_RW.5(config)#enable secret 25121998
+AMD_RW.5(config)#enable secret ********
 AMD_RW.5(config)#interface gi0/2
 AMD_RW.5(config-if)#no shutdown
 AMD_RW.5(config-if)#exit
