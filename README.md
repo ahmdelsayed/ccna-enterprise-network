@@ -167,7 +167,7 @@ CCNA Student | Networking & Cybersecurity Enthusiast
 
 ## 📂 Files Included
 
-- `enterprise-network.pkt` → Cisco Packet Tracer file  
+- `ccna-enterprise-network.pkt` → Cisco Packet Tracer file  
 - `configs/` → All router & switch configurations as `.txt`  
-- `network-diagram.png` → Topology diagram  
+- `network_diagram.png` → Topology diagram  
 - `README.md` → Project documentation
