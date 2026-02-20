@@ -2,7 +2,7 @@
 Switch>en
 Switch#conf t
 AMD_SW.0(config)#hostname AMD_SW.0
-AMD_SW.0(config)#enable secret 25121998
+AMD_SW.0(config)#enable secret ********
 AMD_SW.0(config)#vlan 110
 AMD_SW.0(config-vlan)#name Management
 AMD_SW.0(config-vlan)#vlan 120
@@ -25,7 +25,7 @@ AMD_SW.0(config-if)#do wr
 Switch>en
 Switch#conf t
 AMD_SW.1(config)#hostname AMD_SW.1
-AMD_SW.1(config)#enable secret 25121998
+AMD_SW.1(config)#enable secret ********
 AMD_SW.1(config)#vlan 10
 AMD_SW.1(config-vlan)#name Management
 AMD_SW.1(config-vlan)#vlan 20
@@ -43,7 +43,7 @@ AMD_SW.1(config-if)#do wr
 Switch>en
 Switch#conf t
 AMD_SW.2(config)#hostname AMD_SW.2
-AMD_SW.2(config)#enable secret 25121998
+AMD_SW.2(config)#enable secret ********
 AMD_SW.2(config)#vlan 50
 AMD_SW.2(config-vlan)#name Admin_Right
 AMD_SW.2(config-vlan)#vlan 60
@@ -61,7 +61,7 @@ AMD_SW.2(config-if)#do wr
 Switch>en
 Switch#conf t
 AMD_SW.3(config)#hostname AMD_SW.3
-AMD_SW.3(config)#enable secret 25121998
+AMD_SW.3(config)#enable secret ********
 AMD_SW.3(config)#vlan 130
 AMD_SW.3(config-vlan)#name Sales
 AMD_SW.3(config-vlan)#vlan 140
@@ -79,7 +79,7 @@ AMD_SW.3(config-if)#do wr
 Switch>en
 Switch#conf t
 AMD_SW.4(config)#hostname AMD_SW.4
-AMD_SW.4(config)#enable secret 25121998
+AMD_SW.4(config)#enable secret ********
 AMD_SW.4(config)#vlan 30
 AMD_SW.4(config-vlan)#name Sales
 AMD_SW.4(config-vlan)#vlan 40
@@ -97,7 +97,7 @@ AMD_SW.4(config-if)#do wr
 Switch>en
 Switch#conf t
 AMD_SW.6(config)#hostname AMD_SW.6
-AMD_SW.6(config)#enable secret 25121998
+AMD_SW.6(config)#enable secret ********
 AMD_SW.6(config)#vlan 100
 AMD_SW.6(config-vlan)#name Company_CIO
 AMD_SW.6(config-vlan)#exit
