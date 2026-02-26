@@ -19,12 +19,12 @@ AHMD_SW.0(config-vlan)#exit
 AHMD_SW.0(config)#interface range fa0/1 - 3, fa0/8
 AHMD_SW.0(config-if-range)#switchport mode access
 AHMD_SW.0(config-if-range)#switchport access vlan 110
-AHMD_SW.0(config-if-range)#switchport voice vlan 110
+AHMD_SW.0(config-if-range)#switchport voice vlan 90
 AHMD_SW.0(config-if-range)#exit
 AHMD_SW.0(config)#interface range fa0/4 - 6, fa0/9
 AHMD_SW.0(config-if-range)#switchport mode access
 AHMD_SW.0(config-if-range)#switchport access vlan 120
-AHMD_SW.0(config-if-range)#switchport voice vlan 120
+AHMD_SW.0(config-if-range)#switchport voice vlan 90
 AHMD_SW.0(config-if-range)#exit
 AHMD_SW.0(config)#int fa0/7
 AHMD_SW.0(config-if)#switchport mode access
@@ -59,12 +59,12 @@ AHMD_SW.1(config-vlan)#exit
 AHMD_SW.1(config)#interface range fa0/1 - 3, fa0/8
 AHMD_SW.1(config-if-range)#switchport mode access
 AHMD_SW.1(config-if-range)#switchport access vlan 10
-AHMD_SW.1(config-if-range)#switchport voice vlan 10
+AHMD_SW.1(config-if-range)#switchport voice vlan 90
 AHMD_SW.1(config-if-range)#exit
 AHMD_SW.1(config)#interface range fa0/4 - 6, fa0/9
 AHMD_SW.1(config-if-range)#switchport mode access
 AHMD_SW.1(config-if-range)#switchport access vlan 20
-AHMD_SW.1(config-if-range)#switchport voice vlan 20
+AHMD_SW.1(config-if-range)#switchport voice vlan 90
 AHMD_SW.1(config-if-range)#exit
 AHMD_SW.1(config)#int fa0/7
 AHMD_SW.1(config-if)#switchport mode access
@@ -102,12 +102,12 @@ AHMD_SW.2(config-if)#exit
 AHMD_SW.2(config)#interface range fa0/3 - 4
 AHMD_SW.2(config-if-range)#switchport mode access
 AHMD_SW.2(config-if-range)#switchport access vlan 60
-AHMD_SW.2(config-if-range)#switchport voice vlan 60
+AHMD_SW.2(config-if-range)#switchport voice vlan 90
 AHMD_SW.2(config-if-range)#exit
 AHMD_SW.2(config)#interface range fa0/2 , fa0/5
 AHMD_SW.2(config-if-range)#switchport mode access
 AHMD_SW.2(config-if-range)#switchport access vlan 50
-AHMD_SW.2(config-if-range)#switchport voice vlan 50
+AHMD_SW.2(config-if-range)#switchport voice vlan 90
 AHMD_SW.2(config-if-range)#exit
 AHMD_SW.2(config)#int gi0/1
 AHMD_SW.2(config-if)#switchport mode trunk
@@ -137,12 +137,12 @@ AHMD_SW.3(config-vlan)#exit
 AHMD_SW.3(config)#interface range fa0/1 - 3, fa0/8
 AHMD_SW.3(config-if-range)#switchport mode access
 AHMD_SW.3(config-if-range)#switchport access vlan 130
-AHMD_SW.3(config-if-range)#switchport voice vlan 130
+AHMD_SW.3(config-if-range)#switchport voice vlan 90
 AHMD_SW.3(config-if-range)#exit
 AHMD_SW.3(config)#interface range fa0/4 - 6, fa0/9
 AHMD_SW.3(config-if-range)#switchport mode access
 AHMD_SW.3(config-if-range)#switchport access vlan 140
-AHMD_SW.3(config-if-range)#switchport voice vlan 140
+AHMD_SW.3(config-if-range)#switchport voice vlan 90
 AHMD_SW.3(config-if-range)#exit
 AHMD_SW.3(config)#int fa0/7
 AHMD_SW.3(config-if)#switchport mode access
@@ -176,12 +176,12 @@ AHMD_SW.4(config-vlan)#exit
 AHMD_SW.4(config)#interface range fa0/1 - 3, fa0/8
 AHMD_SW.4(config-if-range)#switchport mode access
 AHMD_SW.4(config-if-range)#switchport access vlan 30
-AHMD_SW.4(config-if-range)#switchport voice vlan 30
+AHMD_SW.4(config-if-range)#switchport voice vlan 90
 AHMD_SW.4(config-if-range)#exit
 AHMD_SW.4(config)#interface range fa0/4 - 6, fa0/9
 AHMD_SW.4(config-if-range)#switchport mode access
 AHMD_SW.4(config-if-range)#switchport access vlan 40
-AHMD_SW.4(config-if-range)#switchport voice vlan 40
+AHMD_SW.4(config-if-range)#switchport voice vlan 90
 AHMD_SW.4(config-if-range)#exit
 AHMD_SW.4(config)#int fa0/7
 AHMD_SW.4(config-if)#switchport mode access
