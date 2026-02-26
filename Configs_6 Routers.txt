@@ -1,261 +1,559 @@
-                                      (AMD_RW.0)
+--------------------------------------------------------------------------------------------
+                                        (AHMD_RW.0)up
 Router>en
 Router#conf t
-AMD_RW.0(config)#hostname AMD_RW.0
-AMD_RW.0(config)#enable secret ********
-AMD_RW.0(config)#service password-encryption
-AMD_RW.0(config)#line console 0
-AMD_RW.0(config-line)#password 25121998
-AMD_RW.0(config-line)#login
-AMD_RW.0(config-line)#exit
-AMD_RW.0(config)#interface gi0/2
-AMD_RW.0(config-if)#no shutdown
-AMD_RW.0(config-if)#exit
-AMD_RW.0(config)#interface gi0/2.100
-AMD_RW.0(config-subif)#encapsulation dot1Q 100
-AMD_RW.0(config-subif)#ip address 192.168.100.1 255.255.255.0
-AMD_RW.0(config-subif)#exit
-AMD_RW.0(config)#interface gi0/0
-AMD_RW.0(config-if)#ip address 10.0.0.2 255.0.0.0
-AMD_RW.0(config-if)#no shutdown
-AMD_RW.0(config-if)#exit
-AMD_RW.0(config)#interface gi0/1
-AMD_RW.0(config-if)#ip address 11.0.0.2 255.0.0.0
-AMD_RW.0(config-if)#no shutdown
-AMD_RW.0(config-if)#exit
-AMD_RW.0(config)#router eigrp 10
-AMD_RW.0(config-router)#network 192.168.100.0
-AMD_RW.0(config-router)#network 10.0.0.0
-AMD_RW.0(config-router)#network 11.0.0.0
-AMD_RW.0(config-if)#exit
-AMD_RW.0(config)#ip dhcp excluded-address 192.168.100.1
-AMD_RW.0(config)#ip dhcp pool VLAN100
-AMD_RW.0(dhcp-config)#network 192.168.100.0 255.255.255.0
-AMD_RW.0(dhcp-config)#default-router 192.168.100.1
-AMD_RW.0(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.0(dhcp-config)#exit
-AMD_RW.0(config)#do wr
-Building configuration...
-[OK]
-                                      (AMD_RW.1)
-Router>en
-Router#conf t
-AMD_RW.1(config)#hostname AMD_RW.1
-AMD_RW.1(config)#enable secret ********
-AMD_RW.1(config)#interface gi0/2
-AMD_RW.1(config-if)#no shutdown
-AMD_RW.1(config-if)#exit
-AMD_RW.1(config)#interface gi0/2.90
-AMD_RW.1(config-subif)#encapsulation dot1Q 90
-AMD_RW.1(config-subif)#ip address 192.168.90.1 255.255.255.0
-AMD_RW.1(config-subif)#exit
-AMD_RW.1(config)#interface gi0/2.110
-AMD_RW.1(config-subif)#encapsulation dot1Q 110
-AMD_RW.1(config-subif)#ip address 192.168.110.1 255.255.255.0
-AMD_RW.1(config-subif)#exit
-AMD_RW.1(config)#interface gi0/2.120
-AMD_RW.1(config-subif)#encapsulation dot1Q 120
-AMD_RW.1(config-subif)#ip address 192.168.120.1 255.255.255.0
-AMD_RW.1(config-subif)#exit
-AMD_RW.1(config)#interface gi0/0
-AMD_RW.1(config-if)#ip address 10.0.0.1 255.0.0.0
-AMD_RW.1(config-if)#no shutdown
-AMD_RW.1(config-if)#exit
-AMD_RW.1(config)#interface gi0/1
-AMD_RW.1(config-if)#ip address 14.0.0.1 255.0.0.0
-AMD_RW.1(config-if)#no shutdown
-AMD_RW.1(config-if)#exit
-AMD_RW.1(config)#router eigrp 10
-AMD_RW.1(config-router)#network 192.168.90.0
-AMD_RW.1(config-router)#network 192.168.110.0
-AMD_RW.1(config-router)#network 192.168.120.0
-AMD_RW.1(config-router)#network 10.0.0.0
-AMD_RW.1(config-router)#network 14.0.0.0
-AMD_RW.1(config-if)#exit
-AMD_RW.1(config)#ip dhcp excluded-address 192.168.110.1
-AMD_RW.1(config)#ip dhcp excluded-address 192.168.120.1
-AMD_RW.1(config)#ip dhcp pool VLAN110
-AMD_RW.1(dhcp-config)#network 192.168.110.0 255.255.255.0
-AMD_RW.1(dhcp-config)#default-router 192.168.110.1
-AMD_RW.1(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.1(dhcp-config)#exit
-AMD_RW.1(config)#ip dhcp pool VLAN120
-AMD_RW.1(dhcp-config)#network 192.168.120.0 255.255.255.0
-AMD_RW.1(dhcp-config)#default-router 192.168.120.1
-AMD_RW.1(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.1(dhcp-config)#exit
-AMD_RW.1(config)#do wr
-Building configuration...
-[OK]
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname AHMD_RW.0
+AHMD_RW.0(config)#service password-encryption
+AHMD_RW.0(config)#line console 0
+AHMD_RW.0(config-line)#password 25121998
+AHMD_RW.0(config-line)#login
+AHMD_RW.0(config-line)#exit
+AHMD_RW.0(config)#enable secret 25121998
+AHMD_RW.0(config)#exit
+AHMD_RW.0#
+%SYS-5-CONFIG_I: Configured from console by console
 
-                                      (AMD_RW.2)
-Router>en
-Router#conf t
-AMD_RW.2(config)#hostname AMD_RW.2
-AMD_RW.2(config)#enable secret ********
-AMD_RW.2(config)#interface gi0/2
-AMD_RW.2(config-if)#no shutdown
-AMD_RW.2(config-if)#exit
-AMD_RW.2(config)#interface gi0/2.10
-AMD_RW.2(config-subif)#encapsulation dot1Q 10
-AMD_RW.2(config-subif)#ip address 192.168.10.1 255.255.255.0
-AMD_RW.2(config-subif)#exit
-AMD_RW.2(config)#interface gi0/2.20
-AMD_RW.2(config-subif)#encapsulation dot1Q 20
-AMD_RW.2(config-subif)#ip address 192.168.20.1 255.255.255.0
-AMD_RW.2(config-subif)#exit
-AMD_RW.2(config)#interface gi0/1
-AMD_RW.2(config-if)#ip address 11.0.0.1 255.0.0.0
-AMD_RW.2(config-if)#no shutdown
-AMD_RW.2(config-if)#exit
-AMD_RW.2(config)#interface gi0/0
-AMD_RW.2(config-if)#ip address 12.0.0.1 255.0.0.0
-AMD_RW.2(config-if)#no shutdown
-AMD_RW.2(config-if)#exit
-AMD_RW.2(config)#router eigrp 10
-AMD_RW.2(config-router)#network 192.168.10.0
-AMD_RW.2(config-router)#network 192.168.20.0
-AMD_RW.2(config-router)#network 11.0.0.0
-AMD_RW.2(config-router)#network 12.0.0.0
-AMD_RW.2(config-if)#exit
-AMD_RW.2(config)#ip dhcp excluded-address 192.168.10.1
-AMD_RW.2(config)#ip dhcp excluded-address 192.168.20.1
-AMD_RW.2(config)#ip dhcp excluded-address 192.168.90.1
-AMD_RW.2(config)#ip dhcp pool VLAN10
-AMD_RW.2(dhcp-config)#network 192.168.10.0 255.255.255.0
-AMD_RW.2(dhcp-config)#default-router 192.168.10.1
-AMD_RW.2(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.2(dhcp-config)#exit
-AMD_RW.2(config)#ip dhcp pool VLAN20
-AMD_RW.2(dhcp-config)#network 192.168.20.0 255.255.255.0
-AMD_RW.2(dhcp-config)#default-router 192.168.20.1
-AMD_RW.2(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.2(dhcp-config)#exit
-AMD_RW.2(config)#ip dhcp pool VLAN90
-AMD_RW.2(dhcp-config)#network 192.168.90.0 255.255.255.0
-AMD_RW.2(dhcp-config)#default-router 192.168.90.1
-AMD_RW.2(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.2(dhcp-config)#exit
-AMD_RW.2(config)#do wr
+AHMD_RW.0#en
+AHMD_RW.0#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+AHMD_RW.0(config)#interface fa1/0
+AHMD_RW.0(config-if)#ip address 192.168.100.1 255.255.255.0
+AHMD_RW.0(config-if)#no shut
+
+AHMD_RW.0(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+
+AHMD_RW.0(config-if)#exit
+AHMD_RW.0(config)#interface fa0/1
+AHMD_RW.0(config-if)#ip address 11.0.0.1 255.0.0.0
+AHMD_RW.0(config-if)#no shut
+
+AHMD_RW.0(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+AHMD_RW.0(config-if)#exit
+AHMD_RW.0(config)#interface fa0/0
+AHMD_RW.0(config-if)#ip address 10.0.0.2 255.0.0.0
+AHMD_RW.0(config-if)#no shut
+
+AHMD_RW.0(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+AHMD_RW.0(config-if)#router eigrp 10
+AHMD_RW.0(config-router)#network 192.168.100.0
+AHMD_RW.0(config-router)#network 11.0.0.0
+AHMD_RW.0(config-router)#network 10.0.0.0
+AHMD_RW.0(config-router)#exit
+AHMD_RW.0(config)#ip dhcp excluded-address 192.168.100.1
+AHMD_RW.0(config)#ip dhcp pool VLAN100
+AHMD_RW.0(dhcp-config)#network 192.168.100.0 255.255.255.0
+AHMD_RW.0(dhcp-config)#default-router 192.168.100.1
+AHMD_RW.0(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.0(dhcp-config)#exit
+AHMD_RW.0(config)#interface fa1/0
+AHMD_RW.0(config-if)#no ip address
+AHMD_RW.0(config-if)#no shutdown
+AHMD_RW.0(config-if)#interface fa1/0.100
+AHMD_RW.0(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.100, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.100, changed state to up
+
+AHMD_RW.0(config-subif)#encapsulation dot1Q 100
+AHMD_RW.0(config-subif)#ip address 192.168.100.1 255.255.255.0
+AHMD_RW.0(config-subif)#no shutdown
+AHMD_RW.0(config-subif)#exit
+AHMD_RW.0(config)#do wr
 Building configuration...
 [OK]
-                                      (AMD_RW.3)
+--------------------------------------------------------------------------------------------
+                                      (AHMD_RW.1)up right
 Router>en
 Router#conf t
-AMD_RW.3(config)#hostname AMD_RW.3
-AMD_RW.3(config)#enable secret ********
-AMD_RW.3(config)#interface gi0/2
-AMD_RW.3(config-if)#no shutdown
-AMD_RW.3(config-if)#exit
-AMD_RW.3(config)#interface gi0/2.130
-AMD_RW.3(config-subif)#encapsulation dot1Q 130
-AMD_RW.3(config-subif)#ip address 192.168.130.1 255.255.255.0
-AMD_RW.3(config-subif)#exit
-AMD_RW.3(config)#interface gi0/2.140
-AMD_RW.3(config-subif)#encapsulation dot1Q 140
-AMD_RW.3(config-subif)#ip address 192.168.140.1 255.255.255.0
-AMD_RW.3(config-subif)#exit
-AMD_RW.3(config)#interface gi0/1
-AMD_RW.3(config-if)#ip address 15.0.0.2 255.0.0.0
-AMD_RW.3(config-if)#no shutdown
-AMD_RW.3(config-if)#exit
-AMD_RW.3(config)#interface gi0/0
-AMD_RW.3(config-if)#ip address 14.0.0.2 255.0.0.0
-AMD_RW.3(config-if)#no shutdown
-AMD_RW.3(config-if)#exit
-AMD_RW.3(config)#router eigrp 10
-AMD_RW.3(config-router)#network 192.168.130.0
-AMD_RW.3(config-router)#network 192.168.140.0
-AMD_RW.3(config-router)#network 15.0.0.0
-AMD_RW.3(config-router)#network 14.0.0.0
-AMD_RW.3(config-router)#do wr
-                                      (AMD_RW.4)
-Router>en
-Router#conf t
-AMD_RW.4(config)#hostname AMD_RW.4
-AMD_RW.4(config)#enable secret ********
-AMD_RW.4(config)#interface gi0/2
-AMD_RW.4(config-if)#no shutdown
-AMD_RW.4(config-if)#exit
-AMD_RW.4(config)#interface gi0/2.30
-AMD_RW.4(config-subif)#encapsulation dot1Q 30
-AMD_RW.4(config-subif)#ip address 192.168.30.1 255.255.255.0
-AMD_RW.4(config-subif)#exit
-AMD_RW.4(config)#interface gi0/2.40
-AMD_RW.4(config-subif)#encapsulation dot1Q 40
-AMD_RW.4(config-subif)#ip address 192.168.40.1 255.255.255.0
-AMD_RW.4(config-subif)#exit
-AMD_RW.4(config)#interface gi0/1
-AMD_RW.4(config-if)#ip address 12.0.0.2 255.0.0.0
-AMD_RW.4(config-if)#no shutdown
-AMD_RW.4(config-if)#exit
-AMD_RW.4(config)#interface gi0/0
-AMD_RW.4(config-if)#ip address 13.0.0.1 255.0.0.0
-AMD_RW.4(config-if)#no shutdown
-AMD_RW.4(config-if)#exit
-AMD_RW.4(config)#router eigrp 10
-AMD_RW.4(config-router)#network 192.168.30.0
-AMD_RW.4(config-router)#network 192.168.40.0
-AMD_RW.4(config-router)#network 12.0.0.0
-AMD_RW.4(config-router)#network 13.0.0.0
-AMD_RW.4(config-if)#exit
-AMD_RW.4(config)#ip dhcp excluded-address 192.168.30.1
-AMD_RW.4(config)#ip dhcp excluded-address 192.168.40.1
-AMD_RW.4(config)#ip dhcp pool VLAN30
-AMD_RW.4(dhcp-config)#network 192.168.30.0 255.255.255.0
-AMD_RW.4(dhcp-config)#default-router 192.168.30.1
-AMD_RW.4(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.4(dhcp-config)#exit
-AMD_RW.4(config)#ip dhcp pool VLAN40
-AMD_RW.4(dhcp-config)#network 192.168.40.0 255.255.255.0
-AMD_RW.4(dhcp-config)#default-router 192.168.40.1
-AMD_RW.4(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.4(dhcp-config)#exit
-AMD_RW.4(config)#do wr
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname AHMD_RW.1
+AHMD_RW.1(config)#service password-encryption
+AHMD_RW.1(config)#line console 0
+AHMD_RW.1(config-line)#password 25121998
+AHMD_RW.1(config-line)#login
+AHMD_RW.1(config-line)#exit
+AHMD_RW.1(config)#enable secret 25121998
+AHMD_RW.1(config)#interface fa1/0
+AHMD_RW.1(config-if)#no shutdown
+
+AHMD_RW.1(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+
+AHMD_RW.1(config-if)#exit
+AHMD_RW.1(config)#interface fa1/0.10
+AHMD_RW.1(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.10, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.10, changed state to up
+
+AHMD_RW.1(config-subif)#encapsulation dot1Q 10
+AHMD_RW.1(config-subif)#ip address 192.168.10.1 255.255.255.0
+AHMD_RW.1(config-subif)#exit
+AHMD_RW.1(config)#interface fa1/0.20
+AHMD_RW.1(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.20, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.20, changed state to up
+
+AHMD_RW.1(config-subif)#encapsulation dot1Q 20
+AHMD_RW.1(config-subif)#ip address 192.168.20.1 255.255.255.0
+AHMD_RW.1(config-subif)#exit
+AHMD_RW.1(config)#interface fa1/0.90
+AHMD_RW.1(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.90, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.90, changed state to up
+
+AHMD_RW.1(config-subif)#encapsulation dot1Q 90
+AHMD_RW.1(config-subif)#ip address 192.168.90.1 255.255.255.0
+AHMD_RW.1(config-subif)#exit
+AHMD_RW.1(config)#interface fa0/0
+AHMD_RW.1(config-if)#ip address 12.0.0.1 255.0.0.0
+AHMD_RW.1(config-if)#no shut
+
+AHMD_RW.1(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+AHMD_RW.1(config-if)#exit
+AHMD_RW.1(config)#interface fa0/1
+AHMD_RW.1(config-if)#ip address 11.0.0.2 255.0.0.0
+AHMD_RW.1(config-if)#no shut
+
+AHMD_RW.1(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+AHMD_RW.1(config-if)#exit
+AHMD_RW.1(config)#router eigrp 10
+AHMD_RW.1(config-router)#network 192.168.10.0 0.0.0.255
+AHMD_RW.1(config-router)#network 192.168.20.0 0.0.0.255
+AHMD_RW.1(config-router)#network 192.168.90.0 0.0.0.255
+AHMD_RW.1(config-router)#network 11.0.0.0 0.255.255.255
+AHMD_RW.1(config-router)#
+%DUAL-5-NBRCHANGE: IP-EIGRP 10: Neighbor 11.0.0.1 (FastEthernet0/1) is up: new adjacency
+
+AHMD_RW.1(config-router)#network 12.0.0.0 0.255.255.255
+AHMD_RW.1(config-router)#exit
+AHMD_RW.1(config)#ip dhcp excluded-address 192.168.10.1
+AHMD_RW.1(config)#ip dhcp excluded-address 192.168.20.1
+AHMD_RW.1(config)#ip dhcp excluded-address 192.168.90.1
+AHMD_RW.1(config)#ip dhcp pool VLAN10
+AHMD_RW.1(dhcp-config)#network 192.168.10.0 255.255.255.0
+AHMD_RW.1(dhcp-config)#default-router 192.168.10.1
+AHMD_RW.1(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.1(dhcp-config)#exit
+AHMD_RW.1(config)#ip dhcp pool VLAN20
+AHMD_RW.1(dhcp-config)#network 192.168.20.0 255.255.255.0
+AHMD_RW.1(dhcp-config)#default-router 192.168.20.1
+AHMD_RW.1(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.1(dhcp-config)#exit
+AHMD_RW.1(config)#ip dhcp pool VLAN90
+AHMD_RW.1(dhcp-config)#network 192.168.90.0 255.255.255.0
+AHMD_RW.1(dhcp-config)#default-router 192.168.90.1
+AHMD_RW.1(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.1(dhcp-config)#exit
+AHMD_RW.1(config)#do wr
 Building configuration...
 [OK]
-                                      (AMD_RW.5)
+--------------------------------------------------------------------------------------------
+                                      (AHMD_RW.5)down right
 Router>en
 Router#conf t
-AMD_RW.5(config)#hostname AMD_RW.5
-AMD_RW.5(config)#enable secret ********
-AMD_RW.5(config)#interface gi0/2
-AMD_RW.5(config-if)#no shutdown
-AMD_RW.5(config-if)#exit
-AMD_RW.5(config)#interface gi0/2.50
-AMD_RW.5(config-subif)#encapsulation dot1Q 50
-AMD_RW.5(config-subif)#ip address 192.168.50.1 255.255.255.0
-AMD_RW.5(config-subif)#exit
-AMD_RW.5(config)#interface gi0/2.60
-AMD_RW.5(config-subif)#encapsulation dot1Q 60
-AMD_RW.5(config-subif)#ip address 192.168.60.1 255.255.255.0
-AMD_RW.5(config-subif)#exit
-AMD_RW.5(config)#interface gi0/1
-AMD_RW.5(config-if)#ip address 13.0.0.2 255.0.0.0
-AMD_RW.5(config-if)#no shutdown
-AMD_RW.5(config-if)#exit
-AMD_RW.5(config)#interface gi0/0
-AMD_RW.5(config-if)#ip address 15.0.0.1 255.0.0.0
-AMD_RW.5(config-if)#no shutdown
-AMD_RW.5(config-if)#exit
-AMD_RW.5(config)#router eigrp 10
-AMD_RW.5(config-router)#network 192.168.50.0
-AMD_RW.5(config-router)#network 192.168.60.0
-AMD_RW.5(config-router)#network 13.0.0.0
-AMD_RW.5(config-router)#network 15.0.0.0
-AMD_RW.5(config-if)#exit
-AMD_RW.5(config)#ip dhcp excluded-address 192.168.50.1
-AMD_RW.5(config)#ip dhcp excluded-address 192.168.60.1
-AMD_RW.5(config)#ip dhcp pool VLAN50
-AMD_RW.5(dhcp-config)#network 192.168.50.0 255.255.255.0
-AMD_RW.5(dhcp-config)#default-router 192.168.50.1
-AMD_RW.5(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.5(dhcp-config)#exit
-AMD_RW.5(config)#ip dhcp pool VLAN60
-AMD_RW.5(dhcp-config)#network 192.168.60.0 255.255.255.0
-AMD_RW.5(dhcp-config)#default-router 192.168.60.1
-AMD_RW.5(dhcp-config)#dns-server 8.8.8.8
-AMD_RW.5(dhcp-config)#exit
-AMD_RW.5(config)#do wr
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname AHMD_RW.5
+AHMD_RW.5(config)#service password-encryption
+AHMD_RW.5(config)#line console 0
+AHMD_RW.5(config-line)#password 25121998
+AHMD_RW.5(config-line)#login
+AHMD_RW.5(config-line)#exit
+AHMD_RW.5(config)#enable secret 25121998
+AHMD_RW.5(config)#interface fa1/0
+AHMD_RW.5(config-if)#no shutdown
+
+AHMD_RW.5(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+
+AHMD_RW.5(config-if)#exit
+AHMD_RW.5(config)#interface fa1/0.30
+AHMD_RW.5(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.30, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.30, changed state to up
+
+AHMD_RW.5(config-subif)#encapsulation dot1Q 30
+AHMD_RW.5(config-subif)#ip address 192.168.30.1 255.255.255.0
+AHMD_RW.5(config-subif)#exit
+AHMD_RW.5(config)#interface fa1/0.40
+AHMD_RW.5(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.40, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.40, changed state to up
+
+AHMD_RW.5(config-subif)#encapsulation dot1Q 40
+AHMD_RW.5(config-subif)#ip address 192.168.40.1 255.255.255.0
+AHMD_RW.5(config-subif)#exit
+AHMD_RW.5(config)#interface fa1/0.90
+AHMD_RW.5(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.90, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.90, changed state to up
+
+AHMD_RW.5(config-subif)#encapsulation dot1Q 90
+AHMD_RW.5(config-subif)#ip address 192.168.90.1 255.255.255.0
+AHMD_RW.5(config-subif)#exit
+AHMD_RW.5(config)#interface fa0/0
+AHMD_RW.5(config-if)#ip address 13.0.0.1 255.0.0.0
+AHMD_RW.5(config-if)#no shut
+
+AHMD_RW.5(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+AHMD_RW.5(config-if)#exit
+AHMD_RW.5(config)#interface fa0/1
+AHMD_RW.5(config-if)#ip address 12.0.0.2 255.0.0.0
+AHMD_RW.5(config-if)#no shut
+
+AHMD_RW.5(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+AHMD_RW.5(config-if)#exit
+AHMD_RW.5(config)#router eigrp 10
+AHMD_RW.5(config-router)#network 192.168.30.0 0.0.0.255
+AHMD_RW.5(config-router)#network 192.168.40.0 0.0.0.255
+AHMD_RW.5(config-router)#network 192.168.90.0 0.0.0.255
+AHMD_RW.5(config-router)#network 12.0.0.0 0.255.255.255
+AHMD_RW.5(config-router)#
+%DUAL-5-NBRCHANGE: IP-EIGRP 10: Neighbor 12.0.0.1 (FastEthernet0/1) is up: new adjacency
+
+AHMD_RW.5(config-router)#network 13.0.0.0 0.255.255.255
+AHMD_RW.5(config-router)#ip dhcp excluded-address 192.168.30.1
+AHMD_RW.5(config)#ip dhcp excluded-address 192.168.40.1
+AHMD_RW.5(config)#ip dhcp excluded-address 192.168.90.1
+AHMD_RW.5(config)#ip dhcp pool VLAN30
+AHMD_RW.5(dhcp-config)#network 192.168.30.0 255.255.255.0
+AHMD_RW.5(dhcp-config)#default-router 192.168.30.1
+AHMD_RW.5(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.5(dhcp-config)#exit
+AHMD_RW.5(config)#ip dhcp pool VLAN40
+AHMD_RW.5(dhcp-config)#network 192.168.40.0 255.255.255.0
+AHMD_RW.5(dhcp-config)#default-router 192.168.40.1
+AHMD_RW.5(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.5(dhcp-config)#exit
+AHMD_RW.5(config)#ip dhcp pool VLAN90
+AHMD_RW.5(dhcp-config)#network 192.168.90.0 255.255.255.0
+AHMD_RW.5(dhcp-config)#default-router 192.168.90.1
+AHMD_RW.5(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.5(dhcp-config)#exit
+AHMD_RW.5(config)#do wr
 Building configuration...
 [OK]
+--------------------------------------------------------------------------------------------
+                                      (AHMD_RW.4)down
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname AHMD_RW.4
+AHMD_RW.4(config)#service password-encryption
+AHMD_RW.4(config)#line console 0
+AHMD_RW.4(config-line)#password 25121998
+AHMD_RW.4(config-line)#login
+AHMD_RW.4(config-line)#exit
+AHMD_RW.4(config)#enable secret 25121998
+AHMD_RW.4(config)#interface fa1/0
+AHMD_RW.4(config-if)#no shutdown
+
+AHMD_RW.4(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+
+AHMD_RW.4(config-if)#exit
+AHMD_RW.4(config)#interface fa1/0.50
+AHMD_RW.4(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.50, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.50, changed state to up
+
+AHMD_RW.4(config-subif)#encapsulation dot1Q 50
+AHMD_RW.4(config-subif)#ip address 192.168.50.1 255.255.255.0
+AHMD_RW.4(config-subif)#exit
+AHMD_RW.4(config)#interface fa1/0.60
+AHMD_RW.4(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.60, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.60, changed state to up
+
+AHMD_RW.4(config-subif)#encapsulation dot1Q 60
+AHMD_RW.4(config-subif)#ip address 192.168.60.1 255.255.255.0
+AHMD_RW.4(config-subif)#exit
+AHMD_RW.4(config)#interface fa1/0.90
+AHMD_RW.4(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.90, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.90, changed state to up
+
+AHMD_RW.4(config-subif)#encapsulation dot1Q 90
+AHMD_RW.4(config-subif)#ip address 192.168.90.1 255.255.255.0
+AHMD_RW.4(config-subif)#exit
+AHMD_RW.4(config)#interface fa0/0
+AHMD_RW.4(config-if)#ip address 15.0.0.1 255.0.0.0
+AHMD_RW.4(config-if)#no shut
+
+AHMD_RW.4(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+AHMD_RW.4(config-if)#exit
+AHMD_RW.4(config)#interface fa0/1
+AHMD_RW.4(config-if)#ip address 13.0.0.2 255.0.0.0
+AHMD_RW.4(config-if)#no shut
+
+AHMD_RW.4(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+AHMD_RW.4(config-if)#exit
+AHMD_RW.4(config)#router eigrp 10
+AHMD_RW.4(config-router)#network 192.168.50.0 0.0.0.255
+AHMD_RW.4(config-router)#network 192.168.60.0 0.0.0.255
+AHMD_RW.4(config-router)#network 192.168.90.0 0.0.0.255
+AHMD_RW.4(config-router)#network 13.0.0.0 0.255.255.255
+AHMD_RW.4(config-router)#
+%DUAL-5-NBRCHANGE: IP-EIGRP 10: Neighbor 13.0.0.1 (FastEthernet0/1) is up: new adjacency
+
+AHMD_RW.4(config-router)#network 15.0.0.0 0.255.255.255
+AHMD_RW.4(config-router)#ip dhcp excluded-address 192.168.50.1
+AHMD_RW.4(config)#ip dhcp excluded-address 192.168.60.1
+AHMD_RW.4(config)#ip dhcp excluded-address 192.168.90.1
+AHMD_RW.4(config)#ip dhcp pool VLAN50
+AHMD_RW.4(dhcp-config)#network 192.168.50.0 255.255.255.0
+AHMD_RW.4(dhcp-config)#default-router 192.168.50.1
+AHMD_RW.4(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.4(dhcp-config)#exit
+AHMD_RW.4(config)#ip dhcp pool VLAN60
+AHMD_RW.4(dhcp-config)#network 192.168.60.0 255.255.255.0
+AHMD_RW.4(dhcp-config)#default-router 192.168.60.1
+AHMD_RW.4(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.4(dhcp-config)#exit
+AHMD_RW.4(config)#ip dhcp pool VLAN90
+AHMD_RW.4(dhcp-config)#network 192.168.90.0 255.255.255.0
+AHMD_RW.4(dhcp-config)#default-router 192.168.90.1
+AHMD_RW.4(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.4(dhcp-config)#exit
+AHMD_RW.4(config)#do wr
+Building configuration...
+[OK]
+--------------------------------------------------------------------------------------------
+                                      (AHMD_RW.3)left down
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname AHMD_RW.3
+AHMD_RW.3(config)#service password-encryption
+AHMD_RW.3(config)#line console 0
+AHMD_RW.3(config-line)#password 25121998
+AHMD_RW.3(config-line)#login
+AHMD_RW.3(config-line)#exit
+AHMD_RW.3(config)#enable secret 25121998
+AHMD_RW.3(config)#interface fa1/0
+AHMD_RW.3(config-if)#no shutdown
+
+AHMD_RW.3(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+
+AHMD_RW.3(config-if)#exit
+AHMD_RW.3(config)#interface fa1/0.130
+AHMD_RW.3(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.130, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.130, changed state to up
+
+AHMD_RW.3(config-subif)#encapsulation dot1Q 130
+AHMD_RW.3(config-subif)#ip address 192.168.130.1 255.255.255.0
+AHMD_RW.3(config-subif)#exit
+AHMD_RW.3(config)#interface fa1/0.140
+AHMD_RW.3(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.140, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.140, changed state to up
+
+AHMD_RW.3(config-subif)#encapsulation dot1Q 140
+AHMD_RW.3(config-subif)#ip address 192.168.140.1 255.255.255.0
+AHMD_RW.3(config-subif)#exit
+AHMD_RW.3(config)#interface fa1/0.90
+AHMD_RW.3(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.90, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.90, changed state to up
+
+AHMD_RW.3(config-subif)#encapsulation dot1Q 90
+AHMD_RW.3(config-subif)#ip address 192.168.90.1 255.255.255.0
+AHMD_RW.3(config-subif)#exit
+AHMD_RW.3(config)#interface fa0/0
+AHMD_RW.3(config-if)#ip address 14.0.0.2 255.0.0.0
+AHMD_RW.3(config-if)#no shut
+
+AHMD_RW.3(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+AHMD_RW.3(config-if)#exit
+AHMD_RW.3(config)#interface fa0/1
+AHMD_RW.3(config-if)#ip address 15.0.0.2 255.0.0.0
+AHMD_RW.3(config-if)#no shut
+
+AHMD_RW.3(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+AHMD_RW.3(config-if)#exit
+AHMD_RW.3(config)#router eigrp 10
+AHMD_RW.3(config-router)#network 192.168.130.0 0.0.0.255
+AHMD_RW.3(config-router)#network 192.168.140.0 0.0.0.255
+AHMD_RW.3(config-router)#network 192.168.90.0 0.0.0.255
+AHMD_RW.3(config-router)#network 15.0.0.0 0.255.255.255
+AHMD_RW.3(config-router)#
+%DUAL-5-NBRCHANGE: IP-EIGRP 10: Neighbor 15.0.0.1 (FastEthernet0/1) is up: new adjacency
+
+AHMD_RW.3(config-router)#network 14.0.0.0 0.255.255.255
+AHMD_RW.3(config-router)#ip dhcp excluded-address 192.168.130.1
+AHMD_RW.3(config)#ip dhcp excluded-address 192.168.140.1
+AHMD_RW.3(config)#ip dhcp excluded-address 192.168.90.1
+AHMD_RW.3(config)#ip dhcp pool VLAN130
+AHMD_RW.3(dhcp-config)#network 192.168.130.0 255.255.255.0
+AHMD_RW.3(dhcp-config)#default-router 192.168.130.1
+AHMD_RW.3(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.3(dhcp-config)#exit
+AHMD_RW.3(config)#ip dhcp pool VLAN140
+AHMD_RW.3(dhcp-config)#network 192.168.140.0 255.255.255.0
+AHMD_RW.3(dhcp-config)#default-router 192.168.140.1
+AHMD_RW.3(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.3(dhcp-config)#exit
+AHMD_RW.3(config)#ip dhcp pool VLAN90
+AHMD_RW.3(dhcp-config)#network 192.168.90.0 255.255.255.0
+AHMD_RW.3(dhcp-config)#default-router 192.168.90.1
+AHMD_RW.3(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.3(dhcp-config)#exit
+AHMD_RW.3(config)#do wr
+Building configuration...
+[OK]
+--------------------------------------------------------------------------------------------
+                                      (AHMD_RW.2)left up
+Router>en
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname AHMD_RW.2
+AHMD_RW.2(config)#service password-encryption
+AHMD_RW.2(config)#line console 0
+AHMD_RW.2(config-line)#password 25121998
+AHMD_RW.2(config-line)#login
+AHMD_RW.2(config-line)#exit
+AHMD_RW.2(config)#enable secret 25121998
+AHMD_RW.2(config)#interface fa1/0
+AHMD_RW.2(config-if)#no shutdown
+
+AHMD_RW.2(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet1/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+
+AHMD_RW.2(config-if)#exit
+AHMD_RW.2(config)#interface fa1/0.110
+AHMD_RW.2(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.110, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.110, changed state to up
+
+AHMD_RW.2(config-subif)#encapsulation dot1Q 110
+AHMD_RW.2(config-subif)#ip address 192.168.110.1 255.255.255.0
+AHMD_RW.2(config-subif)#exit
+AHMD_RW.2(config)#interface fa1/0.120
+AHMD_RW.2(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.120, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.120, changed state to up
+
+AHMD_RW.2(config-subif)#encapsulation dot1Q 120
+AHMD_RW.2(config-subif)#ip address 192.168.120.1 255.255.255.0
+AHMD_RW.2(config-subif)#exit
+AHMD_RW.2(config)#interface fa1/0.90
+AHMD_RW.2(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet1/0.90, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0.90, changed state to up
+
+AHMD_RW.2(config-subif)#encapsulation dot1Q 90
+AHMD_RW.2(config-subif)#ip address 192.168.90.1 255.255.255.0
+AHMD_RW.2(config-subif)#exit
+AHMD_RW.2(config)#interface fa0/0
+AHMD_RW.2(config-if)#ip address 10.0.0.1 255.0.0.0
+AHMD_RW.2(config-if)#no shut
+
+AHMD_RW.2(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+AHMD_RW.2(config-if)#exit
+AHMD_RW.2(config)#interface fa0/1
+AHMD_RW.2(config-if)#ip address 14.0.0.1 255.0.0.0
+AHMD_RW.2(config-if)#no shut
+
+AHMD_RW.2(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+AHMD_RW.2(config-if)#exit
+AHMD_RW.2(config)#router eigrp 10
+AHMD_RW.2(config-router)#network 192.168.110.0 0.0.0.255
+AHMD_RW.2(config-router)#network 192.168.120.0 0.0.0.255
+AHMD_RW.2(config-router)#network 192.168.90.0 0.0.0.255
+AHMD_RW.2(config-router)#network 10.0.0.0 0.255.255.255
+AHMD_RW.2(config-router)#
+%DUAL-5-NBRCHANGE: IP-EIGRP 10: Neighbor 10.0.0.2 (FastEthernet0/0) is up: new adjacency
+
+AHMD_RW.2(config-router)#network 14.0.0.0 0.255.255.255
+AHMD_RW.2(config-router)#
+%DUAL-5-NBRCHANGE: IP-EIGRP 10: Neighbor 14.0.0.2 (FastEthernet0/1) is up: new adjacency
+
+AHMD_RW.2(config-router)#exit
+AHMD_RW.2(config)#ip dhcp excluded-address 192.168.110.1
+AHMD_RW.2(config)#ip dhcp excluded-address 192.168.120.1
+AHMD_RW.2(config)#ip dhcp excluded-address 192.168.90.1
+AHMD_RW.2(config)#ip dhcp pool VLAN110
+AHMD_RW.2(dhcp-config)#network 192.168.110.0 255.255.255.0
+AHMD_RW.2(dhcp-config)#default-router 192.168.110.1
+AHMD_RW.2(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.2(dhcp-config)#exit
+AHMD_RW.2(config)#ip dhcp pool VLAN120
+AHMD_RW.2(dhcp-config)#network 192.168.20.0 255.255.255.0
+AHMD_RW.2(dhcp-config)#default-router 192.168.120.1
+AHMD_RW.2(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.2(dhcp-config)#exit
+AHMD_RW.2(config)#ip dhcp pool VLAN90
+AHMD_RW.2(dhcp-config)#network 192.168.90.0 255.255.255.0
+AHMD_RW.2(dhcp-config)#default-router 192.168.90.1
+AHMD_RW.2(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.2(dhcp-config)#exit
+AHMD_RW.2(config)#do wr
+Building configuration...
+[OK]
+--------------------------------------------------------------------------------------------
