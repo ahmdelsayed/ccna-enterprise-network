@@ -66,6 +66,17 @@ AHMD_RW.0(config-subif)#encapsulation dot1Q 100
 AHMD_RW.0(config-subif)#ip address 192.168.100.1 255.255.255.0
 AHMD_RW.0(config-subif)#no shutdown
 AHMD_RW.0(config-subif)#exit
+AHMD_RW.0(config)#telephony-service
+AHMD_RW.0(config-telephony)#max-ephones 1
+AHMD_RW.0(config-telephony)#max-dn 1
+AHMD_RW.0(config-telephony)#ip source-address 192.168.100.1 port 2000
+AHMD_RW.0(config-telephony)#auto assign 1 to 1
+AHMD_RW.0(config-telephony)#exit
+AHMD_RW.0(config)#ephone-dn 1
+AHMD_RW.0(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 1.1, changed state to up
+
+AHMD_RW.0(config-ephone-dn)#number 1100
+AHMD_RW.0(config-ephone-dn)#exit
 AHMD_RW.0(config)#do wr
 Building configuration...
 [OK]
@@ -166,6 +177,22 @@ AHMD_RW.1(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.1(dhcp-config)#dns-server 8.8.8.8
 AHMD_RW.1(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.1(dhcp-config)#exit
+AHMD_RW.1(config)#telephony-service
+AHMD_RW.1(config-telephony)#max-ephones 2
+AHMD_RW.1(config-telephony)#max-dn 2
+AHMD_RW.1(config-telephony)#ip source-address 192.168.90.1 port 2000
+AHMD_RW.1(config-telephony)#auto assign 1 to 2
+AHMD_RW.1(config-telephony)#exit
+AHMD_RW.1(config)#ephone-dn 1
+AHMD_RW.1(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 1.1, changed state to up
+
+AHMD_RW.1(config-ephone-dn)#number 1010
+AHMD_RW.1(config-ephone-dn)#exit
+AHMD_RW.1(config)#ephone-dn 2
+AHMD_RW.1(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 2.1, changed state to up
+
+AHMD_RW.1(config-ephone-dn)#number 1020
+AHMD_RW.1(config-ephone-dn)#exit
 AHMD_RW.1(config)#do wr
 Building configuration...
 [OK]
@@ -265,6 +292,26 @@ AHMD_RW.5(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.5(dhcp-config)#dns-server 8.8.8.8
 AHMD_RW.5(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.5(dhcp-config)#exit
+AHMD_RW.5>en
+Password: 
+AHMD_RW.5#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+AHMD_RW.5(config)#telephony-service
+AHMD_RW.5(config-telephony)#max-ephones 2
+AHMD_RW.5(config-telephony)#max-dn 2
+AHMD_RW.5(config-telephony)#ip source-address 192.168.90.1 port 2000
+AHMD_RW.5(config-telephony)#auto assign 1 to 2
+AHMD_RW.5(config-telephony)#exit
+AHMD_RW.5(config)#ephone-dn 1
+AHMD_RW.5(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 1.1, changed state to up
+
+AHMD_RW.5(config-ephone-dn)#number 1040
+AHMD_RW.5(config-ephone-dn)#exit
+AHMD_RW.5(config)#ephone-dn 2
+AHMD_RW.5(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 2.1, changed state to up
+
+AHMD_RW.5(config-ephone-dn)#number 1030
+AHMD_RW.5(config-ephone-dn)#exit
 AHMD_RW.5(config)#do wr
 Building configuration...
 [OK]
@@ -364,6 +411,22 @@ AHMD_RW.4(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.4(dhcp-config)#dns-server 8.8.8.8
 AHMD_RW.4(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.4(dhcp-config)#exit
+AHMD_RW.4(config)#telephony-service
+AHMD_RW.4(config-telephony)#max-ephones 2
+AHMD_RW.4(config-telephony)#max-dn 2
+AHMD_RW.4(config-telephony)#ip source-address 192.168.90.1 port 2000
+AHMD_RW.4(config-telephony)#auto assign 1 to 2
+AHMD_RW.4(config-telephony)#exit
+AHMD_RW.4(config)#ephone-dn 1
+AHMD_RW.4(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 1.1, changed state to up
+
+AHMD_RW.4(config-ephone-dn)#number 1060
+AHMD_RW.4(config-ephone-dn)#exit
+AHMD_RW.4(config)#ephone-dn 2
+AHMD_RW.4(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 2.1, changed state to up
+
+AHMD_RW.4(config-ephone-dn)#number 1150
+AHMD_RW.4(config-ephone-dn)#exit
 AHMD_RW.4(config)#do wr
 Building configuration...
 [OK]
@@ -463,6 +526,22 @@ AHMD_RW.3(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.3(dhcp-config)#dns-server 8.8.8.8
 AHMD_RW.3(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.3(dhcp-config)#exit
+AHMD_RW.3(config)#telephony-service
+AHMD_RW.3(config-telephony)#max-ephones 2
+AHMD_RW.3(config-telephony)#max-dn 2
+AHMD_RW.3(config-telephony)#ip source-address 192.168.90.1 port 2000
+AHMD_RW.3(config-telephony)#auto assign 1 to 2
+AHMD_RW.3(config-telephony)#exit
+AHMD_RW.3(config)#ephone-dn 1
+AHMD_RW.3(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 1.1, changed state to up
+
+AHMD_RW.3(config-ephone-dn)#number 1130
+AHMD_RW.3(config-ephone-dn)#exit
+AHMD_RW.3(config)#ephone-dn 2
+AHMD_RW.3(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 2.1, changed state to up
+
+AHMD_RW.3(config-ephone-dn)#number 1140
+AHMD_RW.3(config-ephone-dn)#exit
 AHMD_RW.3(config)#do wr
 Building configuration...
 [OK]
@@ -568,6 +647,22 @@ AHMD_RW.2(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.2(dhcp-config)#dns-server 8.8.8.8
 AHMD_RW.2(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.2(dhcp-config)#exit
+AHMD_RW.2(config)#telephony-service
+AHMD_RW.2(config-telephony)#max-ephones 2
+AHMD_RW.2(config-telephony)#max-dn 2
+AHMD_RW.2(config-telephony)#ip source-address 192.168.90.1 port 2000
+AHMD_RW.2(config-telephony)#auto assign 1 to 2
+AHMD_RW.2(config-telephony)#exit
+AHMD_RW.2(config)#ephone-dn 1
+AHMD_RW.2(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 1.1, changed state to up
+
+AHMD_RW.2(config-ephone-dn)#number 1110
+AHMD_RW.2(config-ephone-dn)#exit
+AHMD_RW.2(config)#ephone-dn 2
+AHMD_RW.2(config-ephone-dn)#%LINK-3-UPDOWN: Interface ephone_dsp DN 2.1, changed state to up
+
+AHMD_RW.2(config-ephone-dn)#number 1120
+AHMD_RW.2(config-ephone-dn)#exit
 AHMD_RW.2(config)#do wr
 Building configuration...
 [OK]
