@@ -211,7 +211,7 @@ AHMD_SW.6(config-vlan)#exit
 AHMD_SW.6(config)#interface range fa0/1 - 2
 AHMD_SW.6(config-if-range)#switchport mode access
 AHMD_SW.6(config-if-range)#switchport access vlan 100
-AHMD_SW.6(config-if-range)#switchport voice vlan 100
+AHMD_SW.6(config-if-range)#switchport voice vlan 90
 AHMD_SW.6(config-if-range)#exit
 AHMD_SW.6(config)#int gi0/1
 AHMD_SW.6(config-if)#switchport mode trunk
