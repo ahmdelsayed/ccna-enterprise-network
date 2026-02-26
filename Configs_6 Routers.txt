@@ -152,16 +152,19 @@ AHMD_RW.1(config)#ip dhcp pool VLAN10
 AHMD_RW.1(dhcp-config)#network 192.168.10.0 255.255.255.0
 AHMD_RW.1(dhcp-config)#default-router 192.168.10.1
 AHMD_RW.1(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.1(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.1(dhcp-config)#exit
 AHMD_RW.1(config)#ip dhcp pool VLAN20
 AHMD_RW.1(dhcp-config)#network 192.168.20.0 255.255.255.0
 AHMD_RW.1(dhcp-config)#default-router 192.168.20.1
 AHMD_RW.1(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.1(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.1(dhcp-config)#exit
 AHMD_RW.1(config)#ip dhcp pool VLAN90
 AHMD_RW.1(dhcp-config)#network 192.168.90.0 255.255.255.0
 AHMD_RW.1(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.1(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.1(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.1(dhcp-config)#exit
 AHMD_RW.1(config)#do wr
 Building configuration...
@@ -248,16 +251,19 @@ AHMD_RW.5(config)#ip dhcp pool VLAN30
 AHMD_RW.5(dhcp-config)#network 192.168.30.0 255.255.255.0
 AHMD_RW.5(dhcp-config)#default-router 192.168.30.1
 AHMD_RW.5(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.5(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.5(dhcp-config)#exit
 AHMD_RW.5(config)#ip dhcp pool VLAN40
 AHMD_RW.5(dhcp-config)#network 192.168.40.0 255.255.255.0
 AHMD_RW.5(dhcp-config)#default-router 192.168.40.1
 AHMD_RW.5(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.5(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.5(dhcp-config)#exit
 AHMD_RW.5(config)#ip dhcp pool VLAN90
 AHMD_RW.5(dhcp-config)#network 192.168.90.0 255.255.255.0
 AHMD_RW.5(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.5(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.5(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.5(dhcp-config)#exit
 AHMD_RW.5(config)#do wr
 Building configuration...
@@ -344,16 +350,19 @@ AHMD_RW.4(config)#ip dhcp pool VLAN50
 AHMD_RW.4(dhcp-config)#network 192.168.50.0 255.255.255.0
 AHMD_RW.4(dhcp-config)#default-router 192.168.50.1
 AHMD_RW.4(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.4(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.4(dhcp-config)#exit
 AHMD_RW.4(config)#ip dhcp pool VLAN60
 AHMD_RW.4(dhcp-config)#network 192.168.60.0 255.255.255.0
 AHMD_RW.4(dhcp-config)#default-router 192.168.60.1
 AHMD_RW.4(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.4(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.4(dhcp-config)#exit
 AHMD_RW.4(config)#ip dhcp pool VLAN90
 AHMD_RW.4(dhcp-config)#network 192.168.90.0 255.255.255.0
 AHMD_RW.4(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.4(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.4(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.4(dhcp-config)#exit
 AHMD_RW.4(config)#do wr
 Building configuration...
@@ -440,16 +449,19 @@ AHMD_RW.3(config)#ip dhcp pool VLAN130
 AHMD_RW.3(dhcp-config)#network 192.168.130.0 255.255.255.0
 AHMD_RW.3(dhcp-config)#default-router 192.168.130.1
 AHMD_RW.3(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.3(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.3(dhcp-config)#exit
 AHMD_RW.3(config)#ip dhcp pool VLAN140
 AHMD_RW.3(dhcp-config)#network 192.168.140.0 255.255.255.0
 AHMD_RW.3(dhcp-config)#default-router 192.168.140.1
 AHMD_RW.3(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.3(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.3(dhcp-config)#exit
 AHMD_RW.3(config)#ip dhcp pool VLAN90
 AHMD_RW.3(dhcp-config)#network 192.168.90.0 255.255.255.0
 AHMD_RW.3(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.3(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.3(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.3(dhcp-config)#exit
 AHMD_RW.3(config)#do wr
 Building configuration...
@@ -542,16 +554,19 @@ AHMD_RW.2(config)#ip dhcp pool VLAN110
 AHMD_RW.2(dhcp-config)#network 192.168.110.0 255.255.255.0
 AHMD_RW.2(dhcp-config)#default-router 192.168.110.1
 AHMD_RW.2(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.2(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.2(dhcp-config)#exit
 AHMD_RW.2(config)#ip dhcp pool VLAN120
 AHMD_RW.2(dhcp-config)#network 192.168.120.0 255.255.255.0
 AHMD_RW.2(dhcp-config)#default-router 192.168.120.1
 AHMD_RW.2(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.2(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.2(dhcp-config)#exit
 AHMD_RW.2(config)#ip dhcp pool VLAN90
 AHMD_RW.2(dhcp-config)#network 192.168.90.0 255.255.255.0
 AHMD_RW.2(dhcp-config)#default-router 192.168.90.1
 AHMD_RW.2(dhcp-config)#dns-server 8.8.8.8
+AHMD_RW.2(dhcp-config)#option 150 ip 192.168.90.1
 AHMD_RW.2(dhcp-config)#exit
 AHMD_RW.2(config)#do wr
 Building configuration...
