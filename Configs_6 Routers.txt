@@ -69,7 +69,7 @@ AHMD_RW.0(config-subif)#exit
 AHMD_RW.0(config)#telephony-service
 AHMD_RW.0(config-telephony)#max-ephones 1
 AHMD_RW.0(config-telephony)#max-dn 1
-AHMD_RW.0(config-telephony)#ip source-address 192.168.100.1 port 2000
+AHMD_RW.0(config-telephony)#ip source-address 192.168.90.1 port 2000
 AHMD_RW.0(config-telephony)#auto assign 1 to 1
 AHMD_RW.0(config-telephony)#exit
 AHMD_RW.0(config)#ephone-dn 1
