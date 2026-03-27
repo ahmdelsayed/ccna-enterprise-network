@@ -6,10 +6,10 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#hostname AHMD_RW.0
 AHMD_RW.0(config)#service password-encryption
 AHMD_RW.0(config)#line console 0
-AHMD_RW.0(config-line)#password 25121998
+AHMD_RW.0(config-line)#password ********
 AHMD_RW.0(config-line)#login
 AHMD_RW.0(config-line)#exit
-AHMD_RW.0(config)#enable secret 25121998
+AHMD_RW.0(config)#enable secret ********
 AHMD_RW.0(config)#exit
 AHMD_RW.0#
 %SYS-5-CONFIG_I: Configured from console by console
@@ -88,10 +88,10 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#hostname AHMD_RW.1
 AHMD_RW.1(config)#service password-encryption
 AHMD_RW.1(config)#line console 0
-AHMD_RW.1(config-line)#password 25121998
+AHMD_RW.1(config-line)#password ********
 AHMD_RW.1(config-line)#login
 AHMD_RW.1(config-line)#exit
-AHMD_RW.1(config)#enable secret 25121998
+AHMD_RW.1(config)#enable secret ********
 AHMD_RW.1(config)#interface fa1/0
 AHMD_RW.1(config-if)#no shutdown
 
@@ -204,10 +204,10 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#hostname AHMD_RW.5
 AHMD_RW.5(config)#service password-encryption
 AHMD_RW.5(config)#line console 0
-AHMD_RW.5(config-line)#password 25121998
+AHMD_RW.5(config-line)#password ********
 AHMD_RW.5(config-line)#login
 AHMD_RW.5(config-line)#exit
-AHMD_RW.5(config)#enable secret 25121998
+AHMD_RW.5(config)#enable secret ********
 AHMD_RW.5(config)#interface fa1/0
 AHMD_RW.5(config-if)#no shutdown
 
@@ -323,10 +323,10 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#hostname AHMD_RW.4
 AHMD_RW.4(config)#service password-encryption
 AHMD_RW.4(config)#line console 0
-AHMD_RW.4(config-line)#password 25121998
+AHMD_RW.4(config-line)#password ********
 AHMD_RW.4(config-line)#login
 AHMD_RW.4(config-line)#exit
-AHMD_RW.4(config)#enable secret 25121998
+AHMD_RW.4(config)#enable secret ********
 AHMD_RW.4(config)#interface fa1/0
 AHMD_RW.4(config-if)#no shutdown
 
@@ -438,10 +438,10 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#hostname AHMD_RW.3
 AHMD_RW.3(config)#service password-encryption
 AHMD_RW.3(config)#line console 0
-AHMD_RW.3(config-line)#password 25121998
+AHMD_RW.3(config-line)#password ********
 AHMD_RW.3(config-line)#login
 AHMD_RW.3(config-line)#exit
-AHMD_RW.3(config)#enable secret 25121998
+AHMD_RW.3(config)#enable secret ********
 AHMD_RW.3(config)#interface fa1/0
 AHMD_RW.3(config-if)#no shutdown
 
@@ -553,10 +553,10 @@ Enter configuration commands, one per line.  End with CNTL/Z.
 Router(config)#hostname AHMD_RW.2
 AHMD_RW.2(config)#service password-encryption
 AHMD_RW.2(config)#line console 0
-AHMD_RW.2(config-line)#password 25121998
+AHMD_RW.2(config-line)#password ********
 AHMD_RW.2(config-line)#login
 AHMD_RW.2(config-line)#exit
-AHMD_RW.2(config)#enable secret 25121998
+AHMD_RW.2(config)#enable secret ********
 AHMD_RW.2(config)#interface fa1/0
 AHMD_RW.2(config-if)#no shutdown
 
